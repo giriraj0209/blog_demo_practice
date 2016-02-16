@@ -9,7 +9,7 @@
   <% @myblogs.each do |blog| %>
   <%= link_to myblog_path(blog) do%>
   <div class="col s12 m4">
-    <div class="car">
+    <div class="card">
       <div class="card-content black-text">
         <span class="card-title black-text"><%= blog.title%></span>
         <p><%= blog.content.truncate(300,separator: "")%></p>
