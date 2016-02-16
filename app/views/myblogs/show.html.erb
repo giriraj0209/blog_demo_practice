@@ -1,19 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @myblog.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @myblog.content %>
-</p>
-
-<p>
-  <strong>Publish:</strong>
-  <%= @myblog.publish %>
-</p>
-
-<%= link_to 'Edit', edit_myblog_path(@myblog) %> |
-<%= link_to 'Back', myblogs_path %>
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="card-panel">
+				<h1 class="center"><%= @myblog.title%></h1>
+				<div class="center">
+					<%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_myblog_path(@myblog),class: "btn blue" %>
+					<%= link_to '<i class="material-icons">delete</i>'.html_safe, @myblog, method: :Delete, data: {confirm: "Are you sure?"}, class: "btn red" %> 
+				</div>
+<hr/>
+<p><%= @myblog.content%></p>
+			</div>
+		</div>
+	</div>
+</div>
