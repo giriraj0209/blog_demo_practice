@@ -1,6 +1,4 @@
-<h1>Editing Myblog</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @myblog %> |
-<%= link_to 'Back', myblogs_path %>
+<div class="container">
+	<h1 class="center">Edit <%= @myblog.title.truncate(15)%></h1>
+	<%= render partial:'form', locals:{button: "Save Blog"} %>
+</div>
